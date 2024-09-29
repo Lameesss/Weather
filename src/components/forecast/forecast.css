@@ -1,0 +1,114 @@
+.title {
+  font-size: 32px; /* Increased font size for emphasis */
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin: 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15); /* More pronounced shadow for depth */
+}
+
+.daily-item {
+  background: #ffffff; /* White background for contrast */
+  border-radius: 15px; /* Softer corners */
+  height: 70px; /* Increased height for better interaction */
+  margin: 15px 0; /* Increased margin for spacing */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px; /* Slightly larger font size */
+  padding: 15px 25px; /* Increased padding for comfort */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.daily-item:hover {
+  background-color: #e3f2fd; /* Lighter blue background on hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+.icon-small {
+  width: 60px; /* Slightly larger icons for better visibility */
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3)); /* Enhanced shadow effect */
+  transition: transform 0.2s ease; /* Smooth scaling effect */
+}
+
+.icon-small:hover {
+  transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+.day {
+  color: #2c3e50; /* Darker color for readability */
+  font-weight: 600;
+  margin-left: 20px;
+  flex: 1;
+  text-transform: capitalize;
+}
+
+.description {
+  color: #34495e; /* Complementary color for description */
+  text-align: right;
+  margin-right: 15px;
+  font-weight: 500;
+  flex: 2;
+  text-transform: capitalize;
+}
+
+.min-max {
+  color: #e74c3c; /* Bright red for min/max temperatures */
+  font-weight: 600;
+  flex: 1;
+  text-align: right;
+}
+
+.daily-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Responsive grid layout */
+  gap: 15px; /* Increased gap for spacing */
+  padding: 20px; /* Increased padding for comfort */
+  background-color: #f7f9fc; /* Lighter background for details */
+  border-radius: 15px; /* Softer corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  margin-bottom: 20px; /* Increased bottom margin */
+}
+
+.daily-details-grid-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px; /* Slightly larger font size */
+  padding: 10px 0; /* Increased padding for better spacing */
+  border-bottom: 1px solid #e0e0e0; /* Light separator for clarity */
+}
+
+.daily-details-grid-item:last-child {
+  border-bottom: none; /* Remove last border */
+}
+
+.daily-details-grid-item label:first-child {
+  color: #757575; /* Gray color for labels */
+}
+
+.daily-details-grid-item label:last-child {
+  color: #333; /* Darker color for values */
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+      font-size: 28px; /* Adjust font size on smaller screens */
+  }
+
+  .daily-item {
+      font-size: 16px; /* Slightly smaller font size */
+      padding: 10px 15px; /* Adjust padding */
+  }
+
+  .daily-details-grid {
+      padding: 10px; /* Reduce padding */
+  }
+
+  .daily-details-grid-item {
+      font-size: 14px; /* Smaller font size for items */
+  }
+}

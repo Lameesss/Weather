@@ -1,0 +1,165 @@
+.weather {
+    width: 90%; /* Use percentage for width to ensure responsiveness */
+    max-width: 400px; /* Limit the max width for larger screens */
+    border-radius: 20px; /* Softer rounded corners */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); /* More subtle shadow */
+    color: #fff;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); /* Retained gradient for attractiveness */
+    margin: 30px auto;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added shadow transition */
+}
+
+.weather:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+}
+
+.top, .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.city {
+    font-weight: 700;
+    font-size: 26px; /* Slightly larger font size for emphasis */
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* More pronounced shadow for depth */
+}
+
+.weather-description {
+    font-weight: 400;
+    font-size: 20px; /* Increased font size for better readability */
+    text-transform: capitalize;
+    opacity: 0.95; /* Higher opacity for better visibility */
+    margin: 5px 0 0 0;
+}
+
+.weather-icon {
+    width: 90px; /* Slightly larger icons */
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.4)); /* Enhanced shadow effect */
+    transition: transform 0.3s ease; /* Smooth transition for icon hover */
+}
+
+.weather-icon:hover {
+    transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+.temperature {
+    font-weight: 700;
+    font-size: 80px; /* Increased font size for more emphasis */
+    letter-spacing: -3px;
+    margin: 30px 0; /* Increased margin for more space above and below */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Shadow for better legibility */
+}
+
+.details {
+    width: 100%;
+    margin-top: 30px; /* Reduced margin for a cleaner look */
+}
+
+.parameter-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0; /* Increased padding for better spacing */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Lightened border */
+    transition: background 0.3s ease; /* Smooth transition for background on hover */
+}
+
+.parameter-row:hover {
+    background: rgba(255, 255, 255, 0.1); /* Light background on hover for emphasis */
+}
+
+.parameter-label {
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+    opacity: 0.9; /* Slightly increased opacity */
+}
+
+.parameter-value {
+    text-align: right;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffe600; /* Bright color for value for emphasis */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .city {
+        font-size: 24px; /* Adjust font size on smaller screens */
+    }
+
+    .weather-description {
+        font-size: 18px; /* Adjust font size for better readability */
+    }
+
+    .temperature {
+        font-size: 70px; /* Adjust font size for better readability */
+    }
+
+    .weather-icon {
+        width: 80px; /* Adjust icon size */
+    }
+
+    .parameter-label, .parameter-value {
+        font-size: 13px; /* Adjust font size for parameters */
+    }
+}
+
+@media (max-width: 480px) {
+    .weather {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    .city {
+        font-size: 20px; /* Further reduced font size */
+    }
+
+    .weather-description {
+        font-size: 16px; /* Further reduced font size */
+    }
+
+    .temperature {
+        font-size: 50px; /* Further reduced font size */
+    }
+
+    .weather-icon {
+        width: 60px; /* Further reduced icon size */
+    }
+
+    .parameter-row {
+        flex-direction: column; /* Stack parameters vertically */
+    }
+
+    .parameter-label, .parameter-value {
+        text-align: left; /* Align text to the left */
+        font-size: 12px; /* Adjust font size for parameters */
+    }
+}
+
+@media (max-width: 320px) {
+    .city {
+        font-size: 18px; /* Further reduced font size */
+    }
+
+    .weather-description {
+        font-size: 14px; /* Further reduced font size */
+    }
+
+    .temperature {
+        font-size: 40px; /* Further reduced font size */
+    }
+
+    .weather-icon {
+        width: 50px; /* Further reduced icon size */
+    }
+
+    .parameter-label, .parameter-value {
+        font-size: 11px; /* Adjust font size for parameters */
+    }
+}
